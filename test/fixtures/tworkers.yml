@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fit_id: 1
+  tag: MyString
+  attr: MyString
+  pattern: MyString
+  action: 1
+  final: false
+
+two:
+  name: MyString
+  fit_id: 1
+  tag: MyString
+  attr: MyString
+  pattern: MyString
+  action: 1
+  final: false

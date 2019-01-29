@@ -1,0 +1,30 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    volumes:
+      - ../dbdata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  api:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+      - /media/osboxes/newmedia:/media
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  webserver:
+    build: 
+      context: .
+      dockerfile: mynginx.Dockerfile
+    volumes:
+      - /media/osboxes/newmedia:/usr/share/nginx/html
+    ports:
+      - "80:80"
+
