@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.5.3
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 #RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 #RUN chmod a+rx /usr/local/bin/youtube-dl
@@ -11,3 +11,4 @@ RUN bundle install
 COPY . /myapp
 ENV DATABASE "dbp"
 
+	

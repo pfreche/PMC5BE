@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
-  get 'greet/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post 'greet/create'
-  put  'greet/:id' => 'greet#update', as: 'greet_update'
-  delete 'greet/:id' => 'greet#destroy', as: 'greet_destroy'
-  get 'greet/:id' => 'greet#show', as: 'greet_show'
-  get 'greet/show'
 
   get 'bookmarks/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'bookmarks/domains' => 'bookmarks#domains'
+  get 'bookmarks/findByDomain' => 'bookmarks#findByDomain'
   post 'bookmarks/create'
   put  'bookmarks/:id' => 'bookmarks#update', as: 'bookmarks_update'
   delete 'bookmarks/:id' => 'bookmarks#destroy', as: 'bookmarks_destroy'
@@ -49,6 +45,7 @@ Rails.application.routes.draw do
   get 'folders/storage/:id' => 'folders#indexByStorage'
   get 'folders/number' => 'folders#number'
   get 'folders/:id/dir' => 'folders#dir'
+  get 'folders/:id/scan' => 'folders#scan'
 
    resources :folders
    resources :locations

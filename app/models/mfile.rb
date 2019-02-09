@@ -113,9 +113,7 @@ MFILE_YOUTUBE = 7
   
   def self.createFrom(result, folder,location)
 
-    if  folder.mfiles.length == 0
-
-       offsetLength = folder.mpath.length + location.uri.length
+      offsetLength = folder.mpath.length + location.uri.length
 
       result.each {|url, assess|
         if assess[:action] == 1
@@ -128,6 +126,5 @@ MFILE_YOUTUBE = 7
           end
         end
        }
-    end
   end
 end

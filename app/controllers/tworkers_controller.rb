@@ -59,7 +59,7 @@ class TworkersController < ApplicationController
   end
 
     def tworker_params
-      params.require(:tworker).permit(:id, :name, :pattern, :fit_id, :tag, :attr, :final, :action)
+      params.require(:tworker).permit(:id, :name, :pattern, :formular, :fit_id, :tag, :attr, :final, :action)
     end
 
 end

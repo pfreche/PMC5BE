@@ -31,4 +31,12 @@ class FoldersController < ApplicationController
      render json: dirlist
   end
 
+  def scan
+     relpath = params[:relpath] || ""
+     id = params[:id]
+     @folder = Folder.find(id) 
+     dirlist = @folder.scan(relpath)
+     render json: dirlist
+  end
+
 end

@@ -82,6 +82,31 @@ class FileHandler
   	Dir.entries(path)
   end
 
+  def self.dir(path,pattern) #todo
+    Dir.glob(path)
+  end
+
+def self.scan(path, filter)
+
+    level =   path.split(/\//).length
+    path = File.join(path,"/**/*")
+    
+    files = []
+    if filter == nil
+      filter  = "."
+    end
+    Dir.glob(path) {|f|
+      if !File.directory?(f) and f[%r{#{filter}}]
+        files << f
+      end
+      }
+    files.sort_by!{ |f| File.mtime(f)}
+    k = files.reverse.map {|l| 
+      l.split(/\//)[level,100]
+    }
+    {level: level, a: path,b: k}
+end
+
 
   def self.loadUrl(u)
     

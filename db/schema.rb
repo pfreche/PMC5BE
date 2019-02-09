@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_144010) do
+ActiveRecord::Schema.define(version: 2019_02_01_205105) do
 
   create_table "agroups", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_01_26_144010) do
     t.datetime "updated_at"
     t.integer "folder_id"
     t.integer "mfile_id"
+    t.integer "bookmark_id"
   end
 
   create_table "collection", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -276,6 +277,7 @@ ActiveRecord::Schema.define(version: 2019_01_26_144010) do
     t.boolean "final"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "formular"
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

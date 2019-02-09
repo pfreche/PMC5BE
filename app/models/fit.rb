@@ -38,7 +38,7 @@ def self.scanUrl(url)
    result
 end
 
-  def self.matchAndScan(url, maxdepth=3, level = 0, result={})
+  def self.matchAndScan(url, maxdepth=5, level = 0, result={})
 
     maxdepth = maxdepth - 1
     return {} if maxdepth < 0
@@ -52,9 +52,15 @@ end
             result[url] = [level,tworker.action]
           else 
             thislinks = tworker.scanUrl(url).uniq # uniq added 20171014
+            if maxdepth == 0 and level == 1
+             if thislinks.length == 1
+       #          adfe
+             end
+            end
             thislinks.each {|l|
-               unless result[l]          # if link is not already found 
-                  result[l] = {level: level, action: tworker.action, tworker_id: tworker.id}
+               unless result[l] && result[l][:scanned]      # if link is not already found 
+
+                  result[l] = {level: level, action: tworker.action, tworker_id: tworker.id, scanned: false}
                   unless tworker.final 
                     u =  Fit.matchAndScan(l, maxdepth, level + 1,result)
                   end
@@ -63,6 +69,13 @@ end
           end
         }
     } 
+    rt = result[url]
+    if rt 
+        result[url] = {level: rt[:level], 
+    			   action: rt[:action], 
+    			   tworker_id: rt[:tworker_id],
+    				scanned: true}
+    end
     result 
  end
 
@@ -101,13 +114,27 @@ end
 
     result = Fit.matchAndScan(url)
     title = ""
+    url_parent_bookmark = nil
+    url_parent_bookmark_title = nil
+    
     result.each do |f,g| 
     	if (g[:action] ==3)
     	  title = f
     	end
+    	if (g[:action] ==4)
+    	  url_parent_bookmark = f
+          url_parent_bookmark_title = f      
+    	end
     end 
-    bookmark = Bookmark.newOnly({url: url, title: title})
-   
+    parent_bookmark_id = nil
+    if url_parent_bookmark 
+       parent_bookmark_id = Bookmark.newOnly({url: url_parent_bookmark, 
+       	                          title: url_parent_bookmark_title}).id
+    end
+
+    bookmark = Bookmark.newOnly({url: url, 
+    	title: title, bookmark_id: parent_bookmark_id})
+
     location = Location.find(location_id)
     commonStart = Fit.detCommonStart(result)
     folder = Folder.createFrom(commonStart,bookmark,location) 

@@ -19,25 +19,41 @@ class Tworker < ApplicationRecord
       links = links.map { |l| 
         begin
           if attr and attr.length >0 
-            URI.decode(URI.join(urlbase, URI.encode((l.attr(attr)||"").to_s)).to_s)
+            a = URI.decode(URI.join(urlbase, URI.encode((l.attr(attr)||"").to_s)).to_s)
           else 
-            i = i  + 1
-            l.text.to_s
+          	a = ""
           end
+          i = i  + 1
+          content =  l.text.to_s
+          [a,content]
         rescue
-          "failure"
+           ["fail", "ure"]
         end
       }
     end
     pa = pattern
 #    pattern = pa.sub("<url>",url)
-
-    links.select! { |l| l[%r{#{pattern}}] } if pattern
-
+    if pattern 
+      links.select! { |link| 
+      	m = (link[0] == "") ? 1:0
+      	link[m][%r{#{pattern}}] 
+      	} 
+    end
     if pattern and pattern.length >0 
         links.map! { |link| 
-          %r{#{pattern}}.match(link)[1]
+ 		   	m = (link[0] == "") ? 1:0
+ 		   	matche = %r{#{pattern}}.match(link[m])
+         	result =  matche[1]
+          if formular and formular.length > 0
+               result = formular.sub("<result>",result)
+               result = result.sub("<r2>", matche[2]) if matche[2]
+               result = result.sub("<content>", link[1])
+               
+          end
+          result
         } 
+    else
+       links.map! { |link| link[1] }
     end
 
     links
@@ -45,7 +61,7 @@ class Tworker < ApplicationRecord
  end
 
 
-  def self.matchAndScan(url, maxdepth=3, level = 0, scanners=nil, result={})
+  def self.matchAndScan_disabled(url, maxdepth=3, level = 0, scanners=nil, result={})
 
     maxdepth = maxdepth - 1
     return {} if maxdepth < 0

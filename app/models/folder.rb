@@ -31,6 +31,32 @@ class Folder < ActiveRecord::Base
   	  FileHandler.dir(File.join(path(2),relpath))
   end
 
+  def scan(relpath, filter = nil)
+      FileHandler.scan(File.join(path(2),relpath), filter)
+  end
+
+def scanAndAdd (filter = nil)
+
+    files = scan("",filter)
+    files.each { |file|
+
+       filename = ""
+       last = file.pop
+       file.each { |f|  filename = filename + file[i]
+           filename = filename + "/"
+       }
+       filename = last
+       Mfile.find_or_create_by(folder_id: folder.id, 
+                                  filename: filename) do |mfile|
+              mfile.mtype = Mfile::MFILE_UNDEFINED 
+       end
+      }
+   files
+end
+
+
+
+
   def self.createFrom(commonStart,bookmark,location) 
 
       locationLength = location.uri.length
@@ -41,21 +67,23 @@ class Folder < ActiveRecord::Base
          foldername = ""
       end 
 
-      if bookmark.folder_id 
-         begin 
-           folder = Folder.find(bookmark.folder_id)
-         rescue
-         end
-      end   
-      if  not folder
-         folder = Folder.new(title: bookmark.title, 
-                          storage_id: location.storage_id,
-                          lfolder: "",
-                          mpath: foldername)
-        folder.save
-        bookmark.folder_id = folder.id
-        bookmark.save
-      end
+      folder = Folder.find_or_create_by(id: bookmark.folder_id) do |folder|
+           folder.title = bookmark.title
+           folder.storage_id =  location.storage_id
+           folder.lfolder =  ""
+           folder.mpath = foldername
+           folder.id = nil
+        end
+     if folder.id == 0
+adfe
+     end
+
+
+        if  bookmark.folder_id !=  folder.id
+           bookmark.folder_id = folder.id
+           bookmark.save
+        end
+
       folder
   end
 

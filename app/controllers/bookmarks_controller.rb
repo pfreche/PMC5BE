@@ -26,12 +26,11 @@ class BookmarksController < ApplicationController
 
 
   def create
-      @bookmark = Bookmark.new(bookmark_params)
-#      @bookmark = Bookmark.new
+      if b = Bookmark.find_by(url: params[:url])
+          render json: b
+      else 
+         @bookmark = Bookmark.new(bookmark_params)
       logger.fatal params.to_s
- #     @bookmark.title = params[:title]
-
-#     @bookmark.title = params.to_s
       
       @bookmark.folder_id  = 0
       @bookmark.bookmark_id  = nil
@@ -39,9 +38,9 @@ class BookmarksController < ApplicationController
       if @bookmark.save
           render json: @bookmark 
      else
-      jjjj
-         render json: @bookmark.errors, status: :unprocessable_entity
+       render json: @bookmark.errors, status: :unprocessable_entity
       end
+    end
   end
 
   def update
@@ -50,7 +49,6 @@ class BookmarksController < ApplicationController
        @bookmark.save
       render json: @bookmark 
      end
-     render json: bookmark_params
   end
 
   def destroy
@@ -64,6 +62,17 @@ class BookmarksController < ApplicationController
   def fit
      fits = Fit.findFits(@bookmark.url)
      render json: fits
+  end
+
+
+  def domains  
+     render json: Bookmark.domains
+  end
+
+  def findByDomain
+      domain = params[:domain]
+      bookmarks = Bookmark.findByDomain(domain)
+      render json: bookmarks
   end
 
   private
