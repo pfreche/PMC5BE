@@ -4,8 +4,8 @@ class TworkersController < ApplicationController
   before_action :set_tworker, only: [:show, :bookmarks, :destroy] 
 
   def index
-  	  @tworkers = Tworker.all
-  	  render json: @tworkers
+  	  @tworkers = Tworker.all.order("fit_id ASC")
+  	  render json: @tworkers.as_json(:include => :fit)
   end
 
   def show

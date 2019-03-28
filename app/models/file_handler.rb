@@ -79,11 +79,13 @@ class FileHandler
   end
 
   def self.dir(path)
-  	Dir.entries(path)
+  	files = Dir.entries(path)
+    files.sort.map{|file| {file: file, isDir: File.directory?(File.join(path,file))}}
   end
 
-  def self.dir(path,pattern) #todo
-    Dir.glob(path)
+  def self.dirDeep(path,pattern) #todo for pattern
+    Dir.chdir(path)
+    Dir.glob("**/*")
   end
 
 def self.scan(path, filter)

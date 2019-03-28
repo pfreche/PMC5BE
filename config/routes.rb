@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete 'bookmarks/:id' => 'bookmarks#destroy', as: 'bookmarks_destroy'
   get 'bookmarks/:id' => 'bookmarks#show', as: 'bookmarks_show'
   get 'bookmarks' => 'bookmarks#index', as: 'bookmarks_all'
+  get 'bookmarks/:id/getTitle' => 'bookmarks#getTitle'
+  get 'bookmarks/:id/getChildren' => 'bookmarks#getChildren'
   get 'mfiles/dl' => 'mfiles#dl'
 
   get 'bookmarks/:id/fit' => 'bookmarks#fit'
@@ -48,7 +50,10 @@ Rails.application.routes.draw do
   get 'folders/:id/scan' => 'folders#scan'
 
    resources :folders
-   resources :locations
+   resources :locations do
+    get 'dir', :on => :member
+    post 'addFolder', :on => :member
+   end
    resources :fits do
      get 'fit', :on => :collection
      get 'bookmarks', :on => :member
@@ -65,6 +70,8 @@ Rails.application.routes.draw do
    
    resources :storages do
       get 'downloadable', :on => :member
+      get 'locations', :on => :member
+      #      put 'newLocation', :on => :member
    end
 
 end

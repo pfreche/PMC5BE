@@ -12,11 +12,11 @@ class BookmarksController < ApplicationController
 
   def getTitle
 
-    @bookmark = Bookmark.new(bookmark_params)
-    uri = URI.parse(@bookmark.url)
+    text = FileHandler.loadUrl(URI.escape(@bookmark.url))
+
     begin
-#      response = Net::HTTP.get_response(uri)
-      page = Nokogiri::HTML(open(@bookmark.url))
+#
+      page = Nokogiri::HTML(text)
       @title = page.css("title")[0].text
     rescue StandardError
       @title = "site not available: " + @bookmark.url
@@ -74,6 +74,11 @@ class BookmarksController < ApplicationController
       bookmarks = Bookmark.findByDomain(domain)
       render json: bookmarks
   end
+  
+  def getChildren
+     bookmarks = Bookmark.where(:bookmark_id => params[:id])
+     render json: bookmarks
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
