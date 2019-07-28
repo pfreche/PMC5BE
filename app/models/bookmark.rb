@@ -1,9 +1,28 @@
-class Bookmark < ActiveRecord::Base
+ class Bookmark < ActiveRecord::Base
   belongs_to :folder, optional: true # connection to downloaded folder
   belongs_to :mfile   # connection to mfile from type bookmark to enable classifications
 #  has_one :fit  
 
+def getTitle(saveIt = false, changeIfUnavailable = false)
 
+  titleNew = "keeee"
+  begin
+    text = FileHandler.loadUrl(URI.escape(url))
+    page = Nokogiri::HTML(text)
+    titleNew = page.css("title")[0].text
+    available = true
+  rescue StandardError
+    titleNew = "site not available: " 
+    available = false
+  end
+  if saveIt 
+    if available || changeIfUnavailable
+      self.title = titleNew
+      self.save
+    end
+  end
+  titleNew 
+end
 
 def folderTitle
    if folder
@@ -15,7 +34,7 @@ end
 
 def create_mfile
      
-     if not mfile_id
+     if not mfile_id || mfile_id == 0
        mfile = Mfile.new
        mfile.mtype = Mfile::MFILE_BOOKMARK
        mfile.filename = ""
@@ -24,12 +43,19 @@ def create_mfile
        mfile.save
        self.mfile =  mfile
 #       mfile_id = mfile.id
-     end 
+     end # das ganze funktioniert nicht!!!! mfile_id bleibt of nil
 end
 
 def save
-	create_mfile
+  create_mfile
+  puts mfile_id
     super
+end
+
+def updateFolderTitle
+    if folder_id
+      folder.update(title: title)
+    end
 end
 
 def self.newOnly(h)

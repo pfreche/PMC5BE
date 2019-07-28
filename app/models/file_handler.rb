@@ -17,10 +17,14 @@ class FileHandler
           req = Net::HTTP::Get.new(uri.request_uri)
           r = 0
           if referer == nil
-             req['Referer'] = uri.scheme+"://"+uri.host
+#             req['Referer'] = uri.scheme+"://"+uri.host
           else
-             req['Referer'] = referer
+#             req['Referer'] = referer
           end
+          puts uri.host
+          puts uri.port
+          puts uri.scheme
+#  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL:VERIFY_NONE
           Net::HTTP.start(uri.host, uri.port, use_ssl: (uri.scheme == 'https')) do |http|
               response = http.request(req)
               open(target, "wb") do |file|
@@ -41,7 +45,7 @@ class FileHandler
   def self.download2(source, target, referer = nil, minsize = 0 )
 
           self.createFolder(target)
-          if !File.exist?(target) or File.size(target) >  minsize
+          if !File.exist?(target) or File.size(target) <  minsize
             uri = URI.parse(URI.encode(source))
             referer = uri.scheme + "://"+uri.host
             @curl = "curl -e \"" + referer +  "\""
@@ -50,7 +54,7 @@ class FileHandler
             system(@curl)
             "hhhhh"
           else
-          	"no Download since file size >"+minsize
+          	"no Download since file size >" + minsize.to_s
           end
   end
   
@@ -58,20 +62,27 @@ class FileHandler
     File.exist?(file)
   end
 
-  def self.generateTn(file,tnFile, area=20000)
+  def self.generateTn(file,tnFile, area=50000)
      self.createFolder(tnFile)
-     command = "convert \""+ file + "\" -thumbnail "+area.to_s+"@ \""+ tnFile+"\""
+     if  file.end_with?("pdf") || file.end_with?("PDF")
+      command = "convert \""+ file + "[0]\" -thumbnail "+area.to_s+"@ \""+ tnFile+"\""
+     else
+       command = "convert \""+ file + "\" -thumbnail "+area.to_s+"@ \""+ tnFile+"\""
+     end
      if command
         system(command)
      end
+     command
   end
 
   def self.createFolder(file)
+      puts file
   	  fsplit = File.dirname(file).split(/\//)
       fr = ""
       fsplit.each do |fs|
         next if fs == ""
         fr = File.join(fr,fs)
+        puts fr
         unless File.exist?(fr)
           Dir.mkdir(fr)
         end
@@ -79,13 +90,15 @@ class FileHandler
   end
 
   def self.dir(path)
-  	files = Dir.entries(path)
+  	files = Dir.entries(path).select{|f| f!="."}
     files.sort.map{|file| {file: file, isDir: File.directory?(File.join(path,file))}}
   end
 
   def self.dirDeep(path,pattern) #todo for pattern
     Dir.chdir(path)
-    Dir.glob("**/*")
+    Dir.glob("**/*").reject do |path|
+      File.directory?(path) || path.include?("@eaDir")
+    end
   end
 
 def self.scan(path, filter)
@@ -109,15 +122,26 @@ def self.scan(path, filter)
     {level: level, a: path,b: k}
 end
 
+def self.moveFiles(fSource,fTarget)
+  fSource.zip(fTarget).each do |source, target|
+    if (File.exist?(source))
+       FileHandler.createFolder(target)
+       command = "mv "+source+" "+target
+       system(command)      
+       puts command
+    end
+  end
+end
+
 
   def self.loadUrl(u)
     
-    Rails.cache.fetch(u, expires_in: 12.hours) do 
+    Rails.cache.fetch(u, expires_in: 48.hours) do 
 
         begin
 #         open(u).read  
 
-         uri = URI(u)
+         uri = URI(URI.escape(u))
          Net::HTTP.get(uri)
         end
     end

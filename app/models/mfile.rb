@@ -3,8 +3,10 @@ class Mfile < ActiveRecord::Base
 
 #  has_and_belongs_to_many :attris
 #  has_and_belongs_to_many :agroups
-  belongs_to :folder
+  belongs_to :folder, optional: true
   has_one :bookmark, :dependent => :destroy
+  has_and_belongs_to_many :attris
+  has_many :proberties, :dependent => :destroy
 
   URL_STORAGE_WEB = 1
   URL_STORAGE_FS  = 2
@@ -19,6 +21,7 @@ MFILE_BOOK = 4
 MFILE_IMEDIUM = 5
 MFILE_BOOKMARK = 6
 MFILE_YOUTUBE = 7
+MFILE_FOLDER = 8
 
 
   def downloadable
@@ -29,7 +32,7 @@ MFILE_YOUTUBE = 7
      source = originPath
      target = path(URL_STORAGE_FS)
      if downloadable
-        responseCode = FileHandler.download(source, target,nil,2000)
+        responseCode = FileHandler.download2(source, target,nil,2000)
         generateTn         
         return {source: source, target: target, responseCode: responseCode}
      else
@@ -43,7 +46,7 @@ MFILE_YOUTUBE = 7
 
   def tnExistonFS?
       FileHandler.fileExistonFS(path(URL_STORAGE_FSTN))
-  end
+  end 
 
   def generateTn
       FileHandler.generateTn(path(URL_STORAGE_FS),path(URL_STORAGE_FSTN))
@@ -69,9 +72,9 @@ MFILE_YOUTUBE = 7
 
   def originPath
     p =  folder.originPath + ""+ filename
-    if pdf? and (typ == URL_STORAGE_WEBTN  or typ == URL_STORAGE_FSTN)
-      p.gsub!(".pdf", ".jpg")
-    end
+#    if pdf? and (typ == URL_STORAGE_WEBTN  or typ == URL_STORAGE_FSTN)
+#      p.gsub!(".pdf", ".jpg")
+#    end
     p
   end
 
@@ -111,20 +114,84 @@ MFILE_YOUTUBE = 7
       end
   end
   
+  def self.cutFilenames(result, folder, location)
+    offsetLength = folder.mpath.length + location.uri.length
+    result.each {|f|
+      if f[:action] == 1
+        url = f[:link]
+        ldiff = offsetLength - url.length # is negativ!
+        f[:filename] = url[ldiff..-1]
+      end
+   }
+  end
+
   def self.createFrom(result, folder,location)
 
       offsetLength = folder.mpath.length + location.uri.length
+      mf = []
+      mfile = nil
+      newMfile = false
+      isName = false 
+      proberty = nil
 
-      result.each {|url, assess|
-        if assess[:action] == 1
-          ldiff = offsetLength - url.length # is negativ!
-          filename = url[ldiff..-1]
+      result.each {|f|
+        if f[:action] == 1
+#          url = f[:link]
+#          ldiff = offsetLength - url.length # is negativ!
+#          filename = url[ldiff..-1]
+          filename = f[:filename]
 
-          Mfile.find_or_create_by(folder_id: folder.id, 
+          mfile = Mfile.find_or_create_by(folder_id: folder.id, 
                                   filename: filename) do |mfile|
               mfile.mtype = Mfile::MFILE_IMEDIUM # 20171015
+              mfile.mtype = folder.storage.mtype
+              mf << mfile
           end
+          isName = true
+          mfile.proberties.destroy_all
+        end
+        
+        if f[:action] == 5 && mfile 
+           if f[:prop_config] == "<alternating>"
+             if isName 
+               proberty = Proberty.new
+               if f[:link] != ""
+                  proberty.name = f[:link]
+                  isName = !isName
+              end
+             else
+               proberty.value = f[:link]
+               mfile.proberties << proberty
+               mfile.save
+               isName = !isName
+            end
+             
+           else
+             proberty = Proberty.new
+             proberty.name = f[:prop_config]
+             proberty.value = f[:link].gsub("_"," ")  
+             mfile.proberties << proberty
+             mfile.save
+           end
         end
        }
+       mf
+
+       mf.each {|mfile|
+         title = ""
+         mfile.proberties.each {|p| 
+            if (p.name == "Title") 
+               mfile.title = p.value
+               mfile.save
+            end
+         }
+      }
+  end
+
+  def linkedFolder
+     Folder.find_by_mfile_id(id).first 
   end
 end
+
+
+

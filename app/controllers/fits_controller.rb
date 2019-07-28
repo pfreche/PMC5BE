@@ -30,8 +30,8 @@ class FitsController < ApplicationController
   def update
       @fit = Fit.find(params[:id])
      if @fit.update(fit_params)
-     @fit.save
-      render json: @fit 
+        @fit.save
+        render json: @fit 
      end
   end
 
@@ -54,20 +54,22 @@ class FitsController < ApplicationController
       url = params[:url]
       level = params[:level]
       if level
-        result = Fit.matchAndScan(url, level.to_i)
+        result = Fit.matchAndScan(url, level.to_i)[1]
        else
-        result = Fit.scanUrl(url)
+        result = Fit.scanUrl(url)[1]
       end
       if params[:locate]
         loc = Fit.detCommonStart(result)
         locations = Fit.locations(loc)
-        render json: {commonstart: loc, locations: locations}
+        render json: {commonstart: loc, locations: locations.as_json(:include => :storage), result: result}
       else
-
-      render json: result.to_a
+        render json: result.to_a
       end
   end
-  
+ 
+  render json: @storage.as_json(:include => :locations)
+
+
   def scanAndSave
      url = params[:url]
      location_id = params[:location_id]

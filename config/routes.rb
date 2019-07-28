@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'bookmarks/findByDomain' => 'bookmarks#findByDomain'
   post 'bookmarks/create'
   put  'bookmarks/:id' => 'bookmarks#update', as: 'bookmarks_update'
+  put  'bookmarks/:id/addSuffix' => 'bookmarks#addSuffix'
+  put  'bookmarks/:id/modulateURL' => 'bookmarks#modulateURL'
   delete 'bookmarks/:id' => 'bookmarks#destroy', as: 'bookmarks_destroy'
   get 'bookmarks/:id' => 'bookmarks#show', as: 'bookmarks_show'
   get 'bookmarks' => 'bookmarks#index', as: 'bookmarks_all'
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
 
     post 'add_attri_name', :on => :member
     post 'add_attri', :on => :member
-    delete 'remove_attri', :on => :member
+    delete 'remove_attri/:attri_id' => 'mfiles#remove_attri', :on => :member
     post 'add_agroup', :on => :member
     delete 'remove_agroup', :on => :member
     get 'edit0', :on => :member
@@ -49,6 +51,10 @@ Rails.application.routes.draw do
   get 'folders/:id/dir' => 'folders#dir'
   get 'folders/:id/scan' => 'folders#scan'
 
+  get 'folders/:id/enhance' => 'folders#enhance'
+  get 'folders/:id/scanAndAddFromOriginLocation' => 'folders#scanAndAddFromOriginLocation'
+  put 'folders/:id/moveToLocation' => 'folders#moveToLocation'
+
    resources :folders
    resources :locations do
     get 'dir', :on => :member
@@ -71,7 +77,17 @@ Rails.application.routes.draw do
    resources :storages do
       get 'downloadable', :on => :member
       get 'locations', :on => :member
+      post 'deepCopy', :on => :member
+      post 'inheritMtype', :on => :member
       #      put 'newLocation', :on => :member
    end
+
+   resources :attris do
+     resources :mfiles
+   end
+
+   resources :agroups do
+    resources :mfiles
+  end
 
 end
