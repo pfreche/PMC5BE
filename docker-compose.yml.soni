@@ -1,0 +1,42 @@
+version: '2'
+volumes:
+  syni-video-mount:
+    driver: local
+    driver_opts: 
+      type: none
+      device: /var/services/homes/peter/videoSyni
+      o: bind
+services:
+  db:
+    image: mysql
+    command: [--default-authentication-plugin=mysql_native_password]
+    volumes:
+      - ../mydata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  api:
+    privileged: true
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+      - /volume1/video/SyniVideo:/synivideo
+      - /volume1/omedia:/omedia
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  webserver:
+    build: 
+      context: .
+      dockerfile: mynginx.Dockerfile
+    volumes:
+#      - /volume1/omedia/42\ bilder:/usr/share/nginx/html/bilder
+      - /var/services/homes/peter:/usr/share/nginx/html/peter
+      - /volume1/omedia:/usr/share/nginx/html/omedia
+    ports:
+      - "82:80"
+

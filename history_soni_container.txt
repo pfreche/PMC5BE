@@ -1,0 +1,16 @@
+    1  apt-get install ghostscript
+    2  ghostscript
+    3  gs
+    4  ghostscript
+    5  apt-get install ghostscript
+    6  apt-get install ghostscript
+    7  apt-get install ghostscript --fix-missing
+    8  apt-get update
+    9  apt-get updgrade
+   10  apt-get upgrade
+   11  apt-get install ghostscript
+   12  exit
+   13  youtube -x --audio-format mp3 https://www.youtube.com/watch?v=-rR1l-TbTbU
+   14  youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=-rR1l-TbTbU
+   15  history
+   16  history > history_soni_container.txt

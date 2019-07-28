@@ -8,7 +8,7 @@ class Tworker < ApplicationRecord
 
  def scan(text,urlbase)
 
-    if tag.strip == ""
+    if !tag || tag.strip == ""
       links = []
       links[0] = text
     else 
@@ -18,7 +18,7 @@ class Tworker < ApplicationRecord
       i = 0
       links = links.map { |l| 
         begin
-          if attr and attr.length >0 
+          if attr and attr.length >0 # eigentlich nur sinnvoll im Falle von href !
             a = URI.decode(URI.join(urlbase, URI.encode((l.attr(attr)||"").to_s)).to_s)
           else 
           	a = ""
@@ -40,25 +40,40 @@ class Tworker < ApplicationRecord
       	} 
     end
     if pattern and pattern.length >0 
-        links.map! { |link| 
- 		   	m = (link[0] == "") ? 1:0
- 		   	matche = %r{#{pattern}}.match(link[m])
-         	result =  matche[1]
-          if formular and formular.length > 0
-               result = formular.sub("<result>",result)
-               result = result.sub("<r2>", matche[2]) if matche[2]
-               result = result.sub("<content>", link[1])
-               
-          end
-          result
-        } 
+        links.map! { |link| buildOutcome(link) } 
     else
        links.map! { |link| link[1] }
     end
-
     links
-
  end
+
+  def buildOutcome(linkInput)
+    
+    link = Array (linkInput)
+
+    m = (link[0] == "") ? 1:0
+    matche = %r{#{pattern}}.match(link[m])
+    return nil unless matche
+
+    result1 =  matche[1].to_s.lstrip  # no left whitespaces! 
+    result2 =  matche[2].to_s.lstrip  # ..
+
+    if prop_config && prop_config.start_with?("+") && result2
+       zahl = result2.to_i
+       increment = prop_config[1,10].to_i
+       result2 = (zahl+increment).to_s
+    end
+    if formular and formular.length > 0
+       result = formular.sub("<result>",result1)
+       result = formular.sub("<r1>",result1)
+       result = result.sub("<r2>", result2) if result2
+#       result = result.sub("<content>", link[1])
+    else 
+      result = result1
+    end
+    result
+  end
+
 
 
   def self.matchAndScan_disabled(url, maxdepth=3, level = 0, scanners=nil, result={})
