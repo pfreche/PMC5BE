@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfd1580f-ab17-4e5d-8831-aa35109fe895" name="Default Changelist" comment="">
+      <change afterPath="P:/history.txt" afterDir="false" />
+      <change beforePath="P:/Dockerfile" beforeDir="false" afterPath="P:/Dockerfile" afterDir="false" />
+      <change beforePath="P:/Gemfile" beforeDir="false" afterPath="P:/Gemfile" afterDir="false" />
+      <change beforePath="P:/Gemfile.lock" beforeDir="false" afterPath="P:/Gemfile.lock" afterDir="false" />
+      <change beforePath="P:/README.md" beforeDir="false" afterPath="P:/README.md" afterDir="false" />
+      <change beforePath="P:/Rakefile" beforeDir="false" afterPath="P:/Rakefile" afterDir="false" />
+      <change beforePath="P:/app/channels/application_cable/channel.rb" beforeDir="false" afterPath="P:/app/channels/application_cable/channel.rb" afterDir="false" />
+      <change beforePath="P:/app/channels/application_cable/connection.rb" beforeDir="false" afterPath="P:/app/channels/application_cable/connection.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/application_controller.rb" beforeDir="false" afterPath="P:/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/bookmarks_controller.rb" beforeDir="false" afterPath="P:/app/controllers/bookmarks_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/concerns/.keep" beforeDir="false" afterPath="P:/app/controllers/concerns/.keep" afterDir="false" />
+      <change beforePath="P:/app/controllers/fits_controller.rb" beforeDir="false" afterPath="P:/app/controllers/fits_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/folders_controller.rb" beforeDir="false" afterPath="P:/app/controllers/folders_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/greet_controller.rb" beforeDir="false" afterPath="P:/app/controllers/greet_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/hello_controller.rb" beforeDir="false" afterPath="P:/app/controllers/hello_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/locations_controller.rb" beforeDir="false" afterPath="P:/app/controllers/locations_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/mfiles_controller.rb" beforeDir="false" afterPath="P:/app/controllers/mfiles_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/storages_controller.rb" beforeDir="false" afterPath="P:/app/controllers/storages_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/controllers/tworkers_controller.rb" beforeDir="false" afterPath="P:/app/controllers/tworkers_controller.rb" afterDir="false" />
+      <change beforePath="P:/app/jobs/application_job.rb" beforeDir="false" afterPath="P:/app/jobs/application_job.rb" afterDir="false" />
+      <change beforePath="P:/app/mailers/application_mailer.rb" beforeDir="false" afterPath="P:/app/mailers/application_mailer.rb" afterDir="false" />
+      <change beforePath="P:/app/models/application_record.rb" beforeDir="false" afterPath="P:/app/models/application_record.rb" afterDir="false" />
+      <change beforePath="P:/app/models/bookmark.rb" beforeDir="false" afterPath="P:/app/models/bookmark.rb" afterDir="false" />
+      <change beforePath="P:/app/models/concerns/.keep" beforeDir="false" afterPath="P:/app/models/concerns/.keep" afterDir="false" />
+      <change beforePath="P:/app/models/file_handler.rb" beforeDir="false" afterPath="P:/app/models/file_handler.rb" afterDir="false" />
+      <change beforePath="P:/app/models/fit.rb" beforeDir="false" afterPath="P:/app/models/fit.rb" afterDir="false" />
+      <change beforePath="P:/app/models/folder.rb" beforeDir="false" afterPath="P:/app/models/folder.rb" afterDir="false" />
+      <change beforePath="P:/app/models/location.rb" beforeDir="false" afterPath="P:/app/models/location.rb" afterDir="false" />
+      <change beforePath="P:/app/models/mfile.rb" beforeDir="false" afterPath="P:/app/models/mfile.rb" afterDir="false" />
+      <change beforePath="P:/app/models/storage.rb" beforeDir="false" afterPath="P:/app/models/storage.rb" afterDir="false" />
+      <change beforePath="P:/app/models/tworker.rb" beforeDir="false" afterPath="P:/app/models/tworker.rb" afterDir="false" />
+      <change beforePath="P:/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="P:/app/views/layouts/mailer.html.erb" afterDir="false" />
+      <change beforePath="P:/app/views/layouts/mailer.text.erb" beforeDir="false" afterPath="P:/app/views/layouts/mailer.text.erb" afterDir="false" />
+      <change beforePath="P:/bin/bundle" beforeDir="false" afterPath="P:/bin/bundle" afterDir="false" />
+      <change beforePath="P:/bin/rails" beforeDir="false" afterPath="P:/bin/rails" afterDir="false" />
+      <change beforePath="P:/bin/rake" beforeDir="false" afterPath="P:/bin/rake" afterDir="false" />
+      <change beforePath="P:/bin/setup" beforeDir="false" afterPath="P:/bin/setup" afterDir="false" />
+      <change beforePath="P:/bin/spring" beforeDir="false" afterPath="P:/bin/spring" afterDir="false" />
+      <change beforePath="P:/bin/update" beforeDir="false" afterPath="P:/bin/update" afterDir="false" />
+      <change beforePath="P:/conf/conf.d/default.conf" beforeDir="false" afterPath="P:/conf/conf.d/default.conf" afterDir="false" />
+      <change beforePath="P:/conf/fastcgi_params" beforeDir="false" afterPath="P:/conf/fastcgi_params" afterDir="false" />
+      <change beforePath="P:/conf/koi-utf" beforeDir="false" afterPath="P:/conf/koi-utf" afterDir="false" />
+      <change beforePath="P:/conf/koi-win" beforeDir="false" afterPath="P:/conf/koi-win" afterDir="false" />
+      <change beforePath="P:/conf/mime.types" beforeDir="false" afterPath="P:/conf/mime.types" afterDir="false" />
+      <change beforePath="P:/config.ru" beforeDir="false" afterPath="P:/config.ru" afterDir="false" />
+      <change beforePath="P:/config/application.rb" beforeDir="false" afterPath="P:/config/application.rb" afterDir="false" />
+      <change beforePath="P:/config/boot.rb" beforeDir="false" afterPath="P:/config/boot.rb" afterDir="false" />
+      <change beforePath="P:/config/cable.yml" beforeDir="false" afterPath="P:/config/cable.yml" afterDir="false" />
+      <change beforePath="P:/config/credentials.yml.enc" beforeDir="false" afterPath="P:/config/credentials.yml.enc" afterDir="false" />
+      <change beforePath="P:/config/database.yml" beforeDir="false" afterPath="P:/config/database.yml" afterDir="false" />
+      <change beforePath="P:/config/environment.rb" beforeDir="false" afterPath="P:/config/environment.rb" afterDir="false" />
+      <change beforePath="P:/config/environments/development.rb" beforeDir="false" afterPath="P:/config/environments/development.rb" afterDir="false" />
+      <change beforePath="P:/config/environments/production.rb" beforeDir="false" afterPath="P:/config/environments/production.rb" afterDir="false" />
+      <change beforePath="P:/config/environments/test.rb" beforeDir="false" afterPath="P:/config/environments/test.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/application_controller_renderer.rb" beforeDir="false" afterPath="P:/config/initializers/application_controller_renderer.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="P:/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/cors.rb" beforeDir="false" afterPath="P:/config/initializers/cors.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="P:/config/initializers/filter_parameter_logging.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/inflections.rb" beforeDir="false" afterPath="P:/config/initializers/inflections.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/mime_types.rb" beforeDir="false" afterPath="P:/config/initializers/mime_types.rb" afterDir="false" />
+      <change beforePath="P:/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="P:/config/initializers/wrap_parameters.rb" afterDir="false" />
+      <change beforePath="P:/config/locales/en.yml" beforeDir="false" afterPath="P:/config/locales/en.yml" afterDir="false" />
+      <change beforePath="P:/config/puma.rb" beforeDir="false" afterPath="P:/config/puma.rb" afterDir="false" />
+      <change beforePath="P:/config/routes.rb" beforeDir="false" afterPath="P:/config/routes.rb" afterDir="false" />
+      <change beforePath="P:/config/spring.rb" beforeDir="false" afterPath="P:/config/spring.rb" afterDir="false" />
+      <change beforePath="P:/config/storage.yml" beforeDir="false" afterPath="P:/config/storage.yml" afterDir="false" />
+      <change beforePath="P:/db/migrate/20190118172417_create_fits.rb" beforeDir="false" />
+      <change beforePath="P:/db/migrate/20190126144010_create_tworkers.rb" beforeDir="false" />
+      <change beforePath="P:/db/migrate/20190201205105_add_formula_to_tworker.rb" beforeDir="false" />
+      <change beforePath="P:/db/schema.rb" beforeDir="false" afterPath="P:/db/schema.rb" afterDir="false" />
+      <change beforePath="P:/db/seeds.rb" beforeDir="false" afterPath="P:/db/seeds.rb" afterDir="false" />
+      <change beforePath="P:/docker-compose.yml" beforeDir="false" afterPath="P:/docker-compose.yml" afterDir="false" />
+      <change beforePath="P:/lib/tasks/.keep" beforeDir="false" afterPath="P:/lib/tasks/.keep" afterDir="false" />
+      <change beforePath="P:/log/.keep" beforeDir="false" afterPath="P:/log/.keep" afterDir="false" />
+      <change beforePath="P:/mynginx.Dockerfile" beforeDir="false" afterPath="P:/mynginx.Dockerfile" afterDir="false" />
+      <change beforePath="P:/public/robots.txt" beforeDir="false" afterPath="P:/public/robots.txt" afterDir="false" />
+      <change beforePath="P:/test/controllers/.keep" beforeDir="false" afterPath="P:/test/controllers/.keep" afterDir="false" />
+      <change beforePath="P:/test/controllers/bookmarks_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/bookmarks_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/fits_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/fits_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/folders_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/folders_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/greet_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/greet_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/hello_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/hello_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/locations_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/locations_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/mfiles_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/mfiles_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/storages_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/storages_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/controllers/tworkers_controller_test.rb" beforeDir="false" afterPath="P:/test/controllers/tworkers_controller_test.rb" afterDir="false" />
+      <change beforePath="P:/test/fixtures/.keep" beforeDir="false" afterPath="P:/test/fixtures/.keep" afterDir="false" />
+      <change beforePath="P:/test/fixtures/files/.keep" beforeDir="false" afterPath="P:/test/fixtures/files/.keep" afterDir="false" />
+      <change beforePath="P:/test/fixtures/fits.yml" beforeDir="false" afterPath="P:/test/fixtures/fits.yml" afterDir="false" />
+      <change beforePath="P:/test/fixtures/tworkers.yml" beforeDir="false" afterPath="P:/test/fixtures/tworkers.yml" afterDir="false" />
+      <change beforePath="P:/test/integration/.keep" beforeDir="false" afterPath="P:/test/integration/.keep" afterDir="false" />
+      <change beforePath="P:/test/mailers/.keep" beforeDir="false" afterPath="P:/test/mailers/.keep" afterDir="false" />
+      <change beforePath="P:/test/models/.keep" beforeDir="false" afterPath="P:/test/models/.keep" afterDir="false" />
+      <change beforePath="P:/test/models/fit_test.rb" beforeDir="false" afterPath="P:/test/models/fit_test.rb" afterDir="false" />
+      <change beforePath="P:/test/models/tworker_test.rb" beforeDir="false" afterPath="P:/test/models/tworker_test.rb" afterDir="false" />
+      <change beforePath="P:/test/test_helper.rb" beforeDir="false" afterPath="P:/test/test_helper.rb" afterDir="false" />
+      <change beforePath="P:/vendor/.keep" beforeDir="false" afterPath="P:/vendor/.keep" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
+        <item name="media_development: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="P:/" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="P:\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SPMskoIqjfm9OcpIyBWkA72yMD" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="last_opened_file_path" value="P:/" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.Development: P">
+    <configuration name="Development: P" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="P" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="P:/" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: P" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="P" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="P:/" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: P" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="P" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="P:/" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: P" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="P" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="P:/" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfd1580f-ab17-4e5d-8831-aa35109fe895" name="Default Changelist" comment="" />
+      <created>1571460985101</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571460985101</updated>
+      <workItem from="1571460986774" duration="12210000" />
+      <workItem from="1571490178876" duration="29000" />
+      <workItem from="1571502868544" duration="29556000" />
+      <workItem from="1572627783309" duration="9792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
