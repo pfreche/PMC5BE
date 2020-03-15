@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="">
-      <change beforePath="P:/bin/update" beforeDir="false" afterPath="P:/bin/update" afterDir="false" />
+      <change beforePath="P:/.idea/workspace.xml" beforeDir="false" afterPath="P:/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="P:/Dockerfile" beforeDir="false" afterPath="P:/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584269060206</updated>
-      <workItem from="1584269065745" duration="6136000" />
+      <workItem from="1584269065745" duration="8399000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584282559479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="workspace">
+      <created>1584282978622</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282978622</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add workspace and reformatting" />
     <MESSAGE value="remove migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove migration" />
+    <MESSAGE value="workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
   </component>
 </project>
