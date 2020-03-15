@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'downloader/downloadYoutubeVideo'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'bookmarks/index'
@@ -54,8 +55,9 @@ Rails.application.routes.draw do
   get 'folders/:id/enhance' => 'folders#enhance'
   get 'folders/:id/scanAndAddFromOriginLocation' => 'folders#scanAndAddFromOriginLocation'
   put 'folders/:id/moveToLocation' => 'folders#moveToLocation'
+  put 'folders/:id/removeMfilesWOPhysicalFile' => 'folders#removeMfilesWOPhysicalFile'
 
-   resources :folders
+  resources :folders
    resources :locations do
     get 'dir', :on => :member
     post 'addFolder', :on => :member

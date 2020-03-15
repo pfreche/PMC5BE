@@ -4,7 +4,11 @@ require 'net/http'
 class FileHandler
 
   def self.deleteFile(file)
-      File(file).delete  
+      File.delete(file)
+  end
+
+  def self.deleteDirectory(dir)
+    FileUtils.remove_dir(dir) if File.directory?(dir)
   end
 
   def self.download(source, target, referer = nil, minsize = 0)
@@ -126,7 +130,7 @@ def self.moveFiles(fSource,fTarget)
   fSource.zip(fTarget).each do |source, target|
     if (File.exist?(source))
        FileHandler.createFolder(target)
-       command = "mv "+source+" "+target
+       command = "mv \"" + source + "\" \"" + target + "\""
        system(command)      
        puts command
     end

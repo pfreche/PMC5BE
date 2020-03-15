@@ -29,7 +29,7 @@ class StoragesController < ApplicationController
  
    def destroy
     @storage = Storage.find(params[:id])
-    @storage.destroy
+#    @storage.destroy  //  dont wanna risk accidents
     render json: @storage
  #   "[destroyed: 'yes']"
    end

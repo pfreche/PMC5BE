@@ -1,7 +1,7 @@
 class MfilesController < ApplicationController
 
   before_action :set_mfile, only: [:show, :download, 
-  	:fileExistonFS, :tnExistonFS, :generateTn,
+  	:fileExistonFS, :tnExistonFS, :generateTn, :destroy,
   	:youtubeLink, :update, :destroy, :add_attri, :add_attri_name, :remove_attri, :add_agroup, :remove_agroup, :renderMfile, :download]
 
   def index
@@ -20,6 +20,11 @@ class MfilesController < ApplicationController
     end
      @mfile.url = "blalbal"
      render json: @mfile.as_json(:include => [:folder, :proberties, :attris, :bookmark])
+  end
+
+  def destroy
+    @mfile.destroy
+    render text: "destroyed"
   end
 
   # GET /mfiles/new

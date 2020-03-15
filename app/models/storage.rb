@@ -36,6 +36,7 @@ class Storage < ActiveRecord::Base
     if l = location(typ)
       l.uri      
     else
+      eaer
           ""
     end
   end
