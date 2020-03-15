@@ -29,12 +29,25 @@ class StoragesController < ApplicationController
  
    def destroy
     @storage = Storage.find(params[:id])
-    @storage.destroy
+#    @storage.destroy  //  dont wanna risk accidents
     render json: @storage
  #   "[destroyed: 'yes']"
    end
  
 
+   def deepCopy
+      @storage = Storage.find(params[:id])
+      storageNew = @storage.deepCopy
+      render json: storageNew
+   end
+
+   def inheritMtype
+      @storage = Storage.find(params[:id])
+      storage = @storage.inheritMtype
+      render json: storage
+   end
+
+  
   def downloadable
      render json: {downloadable: @storage.downloadable}
   end
@@ -49,7 +62,7 @@ class StoragesController < ApplicationController
   end
 
   def storage_params
-    params.require(:storage).permit(:name, :mtype)
+    params.require(:storage).permit(:name, :mtype, :fit_id)
   end
 
 end

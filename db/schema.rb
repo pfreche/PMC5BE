@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_01_205105) do
+ActiveRecord::Schema.define(version: 2019_07_13_073843) do
 
   create_table "agroups", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -126,6 +126,7 @@ ActiveRecord::Schema.define(version: 2019_02_01_205105) do
     t.datetime "modified"
     t.date "mod_date"
     t.integer "mtype"
+    t.string "title"
     t.index ["folder_id"], name: "index_mfiles_on_folder_id"
     t.index ["modified"], name: "index_mfiles_on_modified"
   end
@@ -179,6 +180,14 @@ ActiveRecord::Schema.define(version: 2019_02_01_205105) do
     t.datetime "date_modified", null: false
     t.integer "user_id"
     t.index ["name"], name: "name", unique: true
+  end
+
+  create_table "proberties", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.text "value"
+    t.integer "mfile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "properties", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -253,6 +262,7 @@ ActiveRecord::Schema.define(version: 2019_02_01_205105) do
     t.string "filepath_tn", limit: 100
     t.string "webpath_tn", limit: 50
     t.integer "mtype"
+    t.integer "fit_id"
   end
 
   create_table "tracks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -278,6 +288,7 @@ ActiveRecord::Schema.define(version: 2019_02_01_205105) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "formular"
+    t.string "prop_config"
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

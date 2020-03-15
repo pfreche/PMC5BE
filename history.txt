@@ -1,0 +1,53 @@
+    1  apt-get install ghostscript
+    2  ghostscript
+    3  gs
+    4  ghostscript
+    5  apt-get install ghostscript
+    6  apt-get install ghostscript
+    7  apt-get install ghostscript --fix-missing
+    8  apt-get update
+    9  apt-get updgrade
+   10  apt-get upgrade
+   11  apt-get install ghostscript
+   12  exit
+   13  youtube -x --audio-format mp3 https://www.youtube.com/watch?v=-rR1l-TbTbU
+   14  youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=-rR1l-TbTbU
+   15  history
+   16  history > history_soni_container.txt
+   17  exit
+   18  ls
+   19  cd ..
+   20  ls
+   21  cd media/
+   22  ls
+   23  cd ..
+   24  cd omedia/
+   25  ls
+   26  cd collection11
+   27  cd collection1
+   28  ls
+   29  cd ..
+   30  ls
+   31  cd 25hbb/
+   32  ls
+   33  cd ..
+   34  ls
+   35  cd bilder/
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd ..
+   40  cd ..
+   41  cd synivideo/
+   42  ls
+   43  cd youtube/
+   44  ls
+   45  cd Sangah\ Noona/
+   46  ls
+   47  exit
+   48  youtube -x --audio-format mp3 https://www.youtube.com/watch?v=-rR1l-TbTbU
+   49  youtube --write-all-thumbnails -i -w --skip-download  -o "%(title)s-%(id)" youtube.com/watch?v=7SM816P5G9s
+   50  youtube-dl --write-all-thumbnails -i -w --skip-download  -o "%(title)s-%(id)" youtube.com/watch?v=7SM816P5G9s
+   51  youtube-dl --write-all-thumbnails -i -w --skip-download  -o "%(title)s-%(id)s" youtube.com/watch?v=7SM816P5G9s
+   52  ls
+   53  history > history.txt

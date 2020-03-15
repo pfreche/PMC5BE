@@ -11,6 +11,10 @@ class Storage < ActiveRecord::Base
      originLocation ? originLocation.uri : nil
   end
 
+  def originTyp
+    originLocation.typ
+  end
+
   def downloadable 
     locations.select{|l| l.inuse && l.typ == 2}.length > 0 &&
     locations.select{|l| l.origin && l.typ == 1}.length > 0
@@ -32,8 +36,26 @@ class Storage < ActiveRecord::Base
     if l = location(typ)
       l.uri      
     else
+      eaer
           ""
     end
+  end
+
+  def deepCopy
+     storageNew = self.dup
+     storageNew.save
+     locations.each do |location|
+       locationNew = location.dup
+       locationNew.save
+       storageNew.locations << locationNew
+    end
+  end
+
+  def inheritMtype
+    folders.each { |folder|
+       folder.mfiles.where.not(mtype: Mfile::MFILE_FOLDER).update_all(mtype: mtype)
+    }
+    self
   end
 
 end

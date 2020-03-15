@@ -16,11 +16,6 @@ services:
       - .:/myapp
       - /media/osboxes/newmedia:/media/m1
       - /media/osboxes/m2:/media/m2
-      - /media/osboxes/m3:/media/m3
-      - /media/osboxes/m4:/media/m4
-      - /media/osboxes/m5:/media/m5
-      - /media/osboxes/m6:/media/m6
-      - /media/osboxes/m7:/media/m7
     ports:
       - "3000:3000"
     depends_on:
@@ -32,11 +27,6 @@ services:
     volumes:
       - /media/osboxes/newmedia:/usr/share/nginx/html/m1
       - /media/osboxes/m2:/usr/share/nginx/html/m2
-      - /media/osboxes/m3:/usr/share/nginx/html/m3
-      - /media/osboxes/m4:/usr/share/nginx/html/m4
-      - /media/osboxes/m5:/usr/share/nginx/html/m5
-      - /media/osboxes/m6:/usr/share/nginx/html/m6
-      - /media/osboxes/m7:/usr/share/nginx/html/m7
     ports:
       - "80:80"
 

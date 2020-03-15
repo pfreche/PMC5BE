@@ -1,16 +1,30 @@
 class MfilesController < ApplicationController
 
   before_action :set_mfile, only: [:show, :download, 
-  	:fileExistonFS, :tnExistonFS, :generateTn,
+  	:fileExistonFS, :tnExistonFS, :generateTn, :destroy,
   	:youtubeLink, :update, :destroy, :add_attri, :add_attri_name, :remove_attri, :add_agroup, :remove_agroup, :renderMfile, :download]
 
   def index
-  	  @mfiles = Mfile.includes(:folder).limit(40)
-     render json: @mfiles.as_json(:include => :folder)
+    if params[:attri_id]
+      @mfiles = Attri.find(params[:attri_id]).mfiles
+       render json: @mfiles.as_json(:include => :folder)
+    else
+      @mfiles = Mfile.includes(:folder).limit(40)
+      render json: @mfiles.as_json(:include => :folder)
+    end
   end
 
   def show
-     render json: @mfile.as_json(:include => :folder)
+    class << @mfile
+      attr_accessor :url
+    end
+     @mfile.url = "blalbal"
+     render json: @mfile.as_json(:include => [:folder, :proberties, :attris, :bookmark])
+  end
+
+  def destroy
+    @mfile.destroy
+    render text: "destroyed"
   end
 
   # GET /mfiles/new
@@ -31,7 +45,7 @@ class MfilesController < ApplicationController
 
   def generateTn
       d = @mfile.generateTn
-      render json: d 
+      render json: {"command": d}
   end
 
   def fileExistonFS
@@ -45,12 +59,27 @@ class MfilesController < ApplicationController
   def dl
       url = params[:url]
       referer = params[:referer]
-      FileHandler.download(params[:url],"/media/imagefap/a.txt", referer)
+      FileHandler.download(params[:url],"/media/if/a.txt", referer)
   end
 
+  def add_attri
+    attri = Attri.find(params[:attri_id])
+    if attri  && !@mfile.attris.exists?(attri.id)
+       @mfile.attris << attri
+    end
+    render json: @mfile.attris
+  end
+
+  def remove_attri
+    attri = Attri.find(params[:attri_id])
+    if attri  && @mfile.attris.exists?(attri.id)
+       @mfile.attris.destroy(attri)
+    end
+    render json: @mfile.attris
+  end
 
   def set_mfile
-    @mfile = Mfile.includes(:folder).find(params[:id])
+    @mfile = Mfile.includes(:folder).includes(:proberties).includes(:attris).find(params[:id])
   end
 
 
