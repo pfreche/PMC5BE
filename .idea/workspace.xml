@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="" />
+    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="">
+      <change beforePath="P:/bin/update" beforeDir="false" afterPath="P:/bin/update" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,11 @@
     <select />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="P:/" value="dependabot/bundler/rack-cors-1.0.5" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="P:/" />
   </component>
   <component name="ProjectId" id="1ZA5Scabxa2TEKBd8XiI0IZOJF8" />
@@ -91,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584269060206</updated>
-      <workItem from="1584269065745" duration="5801000" />
+      <workItem from="1584269065745" duration="6136000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
@@ -100,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584270140183</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove migration">
+      <created>1584282559479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282559479</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +133,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add workspace and reformatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="add workspace and reformatting" />
+    <MESSAGE value="remove migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove migration" />
   </component>
 </project>
