@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="">
-      <change beforePath="P:/.idea/workspace.xml" beforeDir="false" afterPath="P:/.idea/workspace.xml" afterDir="false" />
       <change beforePath="P:/Dockerfile" beforeDir="false" afterPath="P:/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584269060206</updated>
-      <workItem from="1584269065745" duration="8399000" />
+      <workItem from="1584269065745" duration="8443000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
