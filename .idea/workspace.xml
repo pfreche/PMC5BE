@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="">
+      <change beforePath="P:/.idea/dataSources.local.xml" beforeDir="false" afterPath="P:/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="P:/.idea/dataSources.xml" beforeDir="false" afterPath="P:/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="P:/.idea/workspace.xml" beforeDir="false" afterPath="P:/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="P:/Gemfile.lock" beforeDir="false" afterPath="P:/Gemfile.lock" afterDir="false" />
+      <change beforePath="P:/Dockerfile" beforeDir="false" afterPath="P:/Dockerfile" afterDir="false" />
+      <change beforePath="P:/Gemfile" beforeDir="false" afterPath="P:/Gemfile" afterDir="false" />
+      <change beforePath="P:/Gemfile.lock" beforeDir="false" />
+      <change beforePath="P:/docker-compose.yml.soni" beforeDir="false" afterPath="P:/docker-compose.yml.soni" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +32,11 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
+        <item name="media_development: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -44,6 +54,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="last_opened_file_path" value="P:/" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -75,12 +86,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@268539a5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5495149" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@268539a5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7f1a95cb" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5495149" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@507acd37" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -102,6 +113,9 @@
       <workItem from="1584269065745" duration="8443000" />
       <workItem from="1584286502982" duration="815000" />
       <workItem from="1584287361803" duration="9000" />
+      <workItem from="1584289235762" duration="3432000" />
+      <workItem from="1585405265165" duration="684000" />
+      <workItem from="1593013686765" duration="827000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
