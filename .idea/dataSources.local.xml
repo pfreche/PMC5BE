@@ -31,5 +31,20 @@
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="Rails PMC5BE: test" uuid="08f5b304-ff43-41ef-8b22-ef864c85d6c4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Rails PMC5BE: development" uuid="49b0154e-9d0d-4c52-b940-3c223289da9b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Rails PMC5BE: production" uuid="d1e3c241-0a00-49c1-b85f-4e9851e0925e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

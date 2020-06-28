@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MySQL - @soni" check-outdated="true" uuid="7b7344ce-36a1-480d-acdd-58099e12aedd">
+    <data-source source="LOCAL" name="MySQL - @soni" uuid="7b7344ce-36a1-480d-acdd-58099e12aedd">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -62,6 +62,30 @@
         <property name="characterSetResults" value="utf8" />
         <property name="tinyInt1isBit" value="false" />
       </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="Rails PMC5BE: test" uuid="08f5b304-ff43-41ef-8b22-ef864c85d6c4">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://db:3306/media_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails PMC5BE: development" uuid="49b0154e-9d0d-4c52-b940-3c223289da9b">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://db:3306/media_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails PMC5BE: production" uuid="d1e3c241-0a00-49c1-b85f-4e9851e0925e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://db:3306/media_production</jdbc-url>
     </data-source>
   </component>
 </project>
