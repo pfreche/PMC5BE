@@ -6,6 +6,8 @@ services:
     image: mysql:5.7.25
     volumes:
       - ../dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
   api:
     env_file:
       - /mnt/p/db.env

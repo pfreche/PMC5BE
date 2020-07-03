@@ -77,7 +77,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://db:3306/media_development</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/media_development</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Rails PMC5BE: production" uuid="d1e3c241-0a00-49c1-b85f-4e9851e0925e">
       <driver-ref>mysql.8</driver-ref>

@@ -1,3 +1,9 @@
+class Medium
+  @name
+  @mtype  # audio, foto, movie, bookmark, Mefolder
+  belongs_to Group # optional
+end
+
 class MeFile
   @filename
   @path  #  relative to
@@ -10,15 +16,11 @@ class MeFile
   end
 end
 
-class MeObject
-  @name
-  @meType  # audio, foto, movie, bookmark, Mefolder
-  belongs_to MeFolder # optional
-end
 
-class MeFolder
+class Group
   @name
-  @folderType # download from internet, fs for scanner, youtube
+  @gtyp #download from internet, fs for scanner, youtube
+  @storage_id
   def download
   end
 

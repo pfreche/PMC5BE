@@ -32,42 +32,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="actionview upgrade">
-      <change afterPath="$PROJECT_DIR$/.idea/PMC5BE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/mefileDraft.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml.basement" afterDir="false" />
+    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="secure db and sketch new db design">
+      <change afterPath="$PROJECT_DIR$/app/controllers/media_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/medium.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mefileDraft.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mefileDraft.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml.basement" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml.basement" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - @soni" type="feb32156:DbDataSourceImpl" />
-        <item name="media_development: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -97,11 +75,12 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="RubyDockerConfigurableProvider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controllers" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE\app\controllers" />
       <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE" />
     </key>
   </component>
@@ -214,7 +193,10 @@
       <workItem from="1584289235762" duration="3432000" />
       <workItem from="1585405265165" duration="684000" />
       <workItem from="1593013686765" duration="827000" />
-      <workItem from="1593337384853" duration="22848000" />
+      <workItem from="1593337384853" duration="23790000" />
+      <workItem from="1593759424955" duration="2985000" />
+      <workItem from="1593762469701" duration="81000" />
+      <workItem from="1593762654011" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
@@ -244,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593337584446</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="secure db and sketch new db design">
+      <created>1593526561966</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593526561966</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,17 +252,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="P:/" />
+    </ignored-roots>
     <MESSAGE value="add workspace and reformatting" />
     <MESSAGE value="remove migration" />
     <MESSAGE value="workspace" />
     <MESSAGE value="actionview upgrade" />
-    <option name="LAST_COMMIT_MESSAGE" value="actionview upgrade" />
+    <MESSAGE value="secure db and sketch new db design" />
+    <option name="LAST_COMMIT_MESSAGE" value="secure db and sketch new db design" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593337747224">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593599460727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593337747224" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593599460727" />
     <state x="631" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593498091700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,22 +280,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593337916521" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1593338085487">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="328" y="18" key="SettingsEditor" timestamp="1593762514863">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="328" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593762514863" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593338085487" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593337594511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593337594511" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593522429365">
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593760103616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593522429365" />
-    <state x="443" y="167" key="search.everywhere.popup" timestamp="1593339352686">
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593760103616" />
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup" timestamp="1593761359223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="167" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593339352686" />
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593761359223" />
     <state x="623" y="239" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593337533889" />
   </component>
 </project>

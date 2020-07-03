@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_13_073843) do
+ActiveRecord::Schema.define(version: 2020_07_03_080603) do
 
   create_table "agroups", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -84,6 +84,14 @@ ActiveRecord::Schema.define(version: 2019_07_13_073843) do
     t.integer "mfile_id"
     t.string "title"
     t.index ["storage_id"], name: "index_folders_on_storage_id"
+  end
+
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "gtype"
+    t.integer "storage_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "indexer", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

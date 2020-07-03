@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get 'bookmarks/:id/fit' => 'bookmarks#fit'
 
+  resources :media
 
   resources :mfiles do
     get 'download', :on => :member
