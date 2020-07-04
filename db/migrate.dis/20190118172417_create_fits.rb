@@ -1,4 +1,4 @@
-class CreateFits < ActiveRecord::Migration[5.2]
+class CreateFits < ActiveRecord::Migrations[5.2]
   def change
     create_table :fits do |t|
       t.string :pattern

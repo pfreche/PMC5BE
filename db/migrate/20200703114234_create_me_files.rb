@@ -1,4 +1,4 @@
-class CreateMeFiles < ActiveRecord::Migration[5.2]
+class CreateMeFiles < ActiveRecord::Migrations[5.2]
   def change
     create_table :me_files do |t|
       t.string :name

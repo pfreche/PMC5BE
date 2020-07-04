@@ -1,4 +1,4 @@
-class CreateProberties < ActiveRecord::Migration[5.2]
+class CreateProberties < ActiveRecord::Migrations[5.2]
   def change
     create_table :proberties do |t|
       t.string :name

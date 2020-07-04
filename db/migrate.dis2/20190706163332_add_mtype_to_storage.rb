@@ -1,4 +1,4 @@
-class AddMtypeToStorage < ActiveRecord::Migration[5.2]
+class AddMtypeToStorage < ActiveRecord::Migrations[5.2]
   def change
   end
 end
