@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
+
+  resources :media do
+    get 'xxx', :on => :member
+  end
+  resources :groups do
+    get 'media', :on => :member
+    get 'number', :on => :collection
+  end
+####
+
+
   get 'downloader/downloadYoutubeVideo'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'bookmarks/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'bookmarks/domains' => 'bookmarks#domains'
   get 'bookmarks/findByDomain' => 'bookmarks#findByDomain'
   post 'bookmarks/create'
-  put  'bookmarks/:id' => 'bookmarks#update', as: 'bookmarks_update'
-  put  'bookmarks/:id/addSuffix' => 'bookmarks#addSuffix'
-  put  'bookmarks/:id/modulateURL' => 'bookmarks#modulateURL'
+  put 'bookmarks/:id' => 'bookmarks#update', as: 'bookmarks_update'
+  put 'bookmarks/:id/addSuffix' => 'bookmarks#addSuffix'
+  put 'bookmarks/:id/modulateURL' => 'bookmarks#modulateURL'
   delete 'bookmarks/:id' => 'bookmarks#destroy', as: 'bookmarks_destroy'
   get 'bookmarks/:id' => 'bookmarks#show', as: 'bookmarks_show'
   get 'bookmarks' => 'bookmarks#index', as: 'bookmarks_all'
@@ -18,8 +29,6 @@ Rails.application.routes.draw do
   get 'mfiles/dl' => 'mfiles#dl'
 
   get 'bookmarks/:id/fit' => 'bookmarks#fit'
-
-  resources :media
 
   resources :mfiles do
     get 'download', :on => :member
@@ -40,10 +49,10 @@ Rails.application.routes.draw do
     get 'path', :on => :member
     get 'youtubeLink', :on => :member
     get 'renderMfile', :on => :member
-    get  'classify', :on => :collection
-    get  'slideshow', :on => :collection
+    get 'classify', :on => :collection
+    get 'slideshow', :on => :collection
     post 'set_attris', :on => :collection
-    get  'thumbs', :on => :collection
+    get 'thumbs', :on => :collection
     get 'download', :on => :member
   end
 
@@ -59,37 +68,37 @@ Rails.application.routes.draw do
   put 'folders/:id/removeMfilesWOPhysicalFile' => 'folders#removeMfilesWOPhysicalFile'
 
   resources :folders
-   resources :locations do
+  resources :locations do
     get 'dir', :on => :member
     post 'addFolder', :on => :member
-   end
-   resources :fits do
-     get 'fit', :on => :collection
-     get 'bookmarks', :on => :member
-     get 'tworkers', :on => :member
-   end
+  end
+  resources :fits do
+    get 'fit', :on => :collection
+    get 'bookmarks', :on => :member
+    get 'tworkers', :on => :member
+  end
 
-   resources :tworkers do
+  resources :tworkers do
 #     get 'fit', :on => :collection
-   end
+  end
 
-   get 'tworkers/:id/scanBookmark/:bookmark_id' => 'tworkers#scanBookmark'
-   get 'scanner' => 'fits#scanUrl'
-   post 'scanner' => 'fits#scanAndSave'
-   
-   resources :storages do
-      get 'downloadable', :on => :member
-      get 'locations', :on => :member
-      post 'deepCopy', :on => :member
-      post 'inheritMtype', :on => :member
-      #      put 'newLocation', :on => :member
-   end
+  get 'tworkers/:id/scanBookmark/:bookmark_id' => 'tworkers#scanBookmark'
+  get 'scanner' => 'fits#scanUrl'
+  post 'scanner' => 'fits#scanAndSave'
 
-   resources :attris do
-     resources :mfiles
-   end
+  resources :storages do
+    get 'downloadable', :on => :member
+    get 'locations', :on => :member
+    post 'deepCopy', :on => :member
+    post 'inheritMtype', :on => :member
+    #      put 'newLocation', :on => :member
+  end
 
-   resources :agroups do
+  resources :attris do
+    resources :mfiles
+  end
+
+  resources :agroups do
     resources :mfiles
   end
 

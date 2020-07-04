@@ -33,14 +33,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="secure db and sketch new db design">
-      <change afterPath="$PROJECT_DIR$/app/controllers/media_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/medium.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/Migration.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/group.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/media_types.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/mefileDraft.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mefileDraft.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/media_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/media_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/medium.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/medium.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mfile.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mfile.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml.basement" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml.basement" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200703080603_create_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200703080603_create_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200703080736_create_media.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200703080736_create_media.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby File" />
+        <option value="Ruby Module" />
       </list>
     </option>
   </component>
@@ -81,6 +86,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE\app\controllers" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE\app\models" />
       <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE" />
     </key>
   </component>
@@ -196,7 +202,8 @@
       <workItem from="1593337384853" duration="23790000" />
       <workItem from="1593759424955" duration="2985000" />
       <workItem from="1593762469701" duration="81000" />
-      <workItem from="1593762654011" duration="844000" />
+      <workItem from="1593762654011" duration="4158000" />
+      <workItem from="1593766870350" duration="27758000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
@@ -233,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593526561966</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="start new db model">
+      <created>1593763745629</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593763745629</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +274,8 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="actionview upgrade" />
     <MESSAGE value="secure db and sketch new db design" />
-    <option name="LAST_COMMIT_MESSAGE" value="secure db and sketch new db design" />
+    <MESSAGE value="start new db model" />
+    <option name="LAST_COMMIT_MESSAGE" value="start new db model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593599460727">
@@ -285,18 +300,27 @@
     </state>
     <state x="328" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593762514863" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593338085487" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593337594511">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2" timestamp="1593763779467">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593763779467" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593337594511" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593760103616">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593773101084">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593760103616" />
-    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup" timestamp="1593761359223">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1593773101084" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593801000479">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593761359223" />
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593801000479" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1593777184663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593777184663" />
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup" timestamp="1593803981529">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593803981529" />
     <state x="623" y="239" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593337533889" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-class mediumsController < ApplicationController
+class MediaController < ApplicationController
 
   before_action :set_medium, only: [:show, :download,
   	:fileExistonFS, :tnExistonFS, :generateTn, :destroy,
@@ -6,16 +6,16 @@ class mediumsController < ApplicationController
 
   def index
     if params[:attri_id]
-      @mediums = Attri.find(params[:attri_id]).mediums
-       render json: @mediums.as_json(:include => :folder)
+      @media = Attri.find(params[:attri_id]).mediums
+       render json: @media.as_json
     else
-      @media = Medium.includes(:folder).limit(40)
-      render json: @mediums.as_json(:include => :folder)
+      @media = Medium.includes(:group).limit(100)
+      render json: @media.as_json(:include => :group)
     end
   end
 
-  def show
-     render json: @medium.as_json(:include => [:folder, :proberties, :attris, :bookmark])
+  def show #ok
+     render json: @medium.as_json(:include => [:group, :proberties, :attris, :meFiles])
   end
 
   def destroy
@@ -28,7 +28,7 @@ class mediumsController < ApplicationController
     @medium = Medium.new
   end
 
-  def indexByFolder
+  def indexByFolder  # obsolete > replaced by groups controller method "media"
      folder_id = params[:id]
      @mediums = medium.includes(:folder).where(folder_id: folder_id)
      render json: @media.as_json(:include => :folder)
@@ -41,7 +41,7 @@ class mediumsController < ApplicationController
 
   def generateTn
       d = @medium.generateTn
-      render json: {"command": d}
+      render json: {command: d}
   end
 
   def fileExistonFS
@@ -75,7 +75,7 @@ class mediumsController < ApplicationController
   end
 
   def set_medium
-    @medium = Medium.includes(:folder).includes(:proberties).includes(:attris).find(params[:id])
+    @medium = Medium.includes(:group).includes(:proberties).includes(:attris).find(params[:id])
   end
 
 

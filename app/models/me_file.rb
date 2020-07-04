@@ -1,0 +1,2 @@
+class MeFile < ApplicationRecord
+end
