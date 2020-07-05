@@ -1,12 +1,12 @@
 class MediaController < ApplicationController
 
-  before_action :set_medium, only: [:show, :download,
+  before_action :set_medium, only: [:show, :showFull, :download,
   	:fileExistonFS, :tnExistonFS, :generateTn, :destroy,
   	:youtubeLink, :update, :destroy, :add_attri, :add_attri_name, :remove_attri, :add_agroup, :remove_agroup, :rendermedium, :download]
 
   def index
     if params[:attri_id]
-      @media = Attri.find(params[:attri_id]).mediums
+      @media = Attri.find(params[:attri_id]).media
        render json: @media.as_json
     else
       @media = Medium.includes(:group).limit(100)
@@ -16,6 +16,11 @@ class MediaController < ApplicationController
 
   def show #ok
      render json: @medium.as_json(:include => [:group, :proberties, :attris, :meFiles])
+  end
+
+  def showFull
+    redirect_to  @medium.fqNameCleaned(1)
+    # render json: {name: @medium.fqNameCleaned(1)}
   end
 
   def destroy

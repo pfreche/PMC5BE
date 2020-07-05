@@ -1,42 +1,34 @@
 version: '2'
 services:
   db:
+    env_file:
+      - /mnt/f/db.env
     image: mysql:5.7.25
     volumes:
-      - ../dbdata:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      - ../mydata:/var/lib/mysql
+    ports:
+      - "3306:3306"
   api:
+    privileged: true
+    env_file:
+      - /mnt/f/db.env
     build: .
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: bundle exec rails s -p 2000 -b '0.0.0.0'
     volumes:
       - .:/myapp
-      - /media/osboxes/newmedia:/media/m1
-      - /media/osboxes/m2:/media/m2
-      - /media/osboxes/m3:/media/m3
-      - /media/osboxes/m4:/media/m4
-      - /media/osboxes/m5:/media/m5
-      - /media/osboxes/m6:/media/m6
-      - /media/osboxes/m7:/media/m7
+      - /mnt/f/TV:/synivideo
+      - /mnt/f/omedia:/omedia
     ports:
-      - "3000:3000"
+      - "2000:2000"
     depends_on:
       - db
-  webserver:
+  web:
     build: 
       context: .
       dockerfile: mynginx.Dockerfile
     volumes:
-      - /media/osboxes/newmedia:/usr/share/nginx/html/m1
-      - /media/osboxes/m2:/usr/share/nginx/html/m2
-      - /media/osboxes/m3:/usr/share/nginx/html/m3
-      - /media/osboxes/m4:/usr/share/nginx/html/m4
-      - /media/osboxes/m5:/usr/share/nginx/html/m5
-      - /media/osboxes/m6:/usr/share/nginx/html/m6
-      - /media/osboxes/m7:/usr/share/nginx/html/m7
+      - /mnt/f/TV:/usr/share/nginx/html/synivideo
+      - /mnt/f/omedia:/usr/share/nginx/html/omedia
     ports:
-      - "80:80"
+      - "82:80"
 

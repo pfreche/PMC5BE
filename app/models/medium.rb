@@ -1,11 +1,14 @@
 class Medium < ApplicationRecord
-  belongs_to :group
+  belongs_to :group, optional: true  # important!
   has_many :meFiles
   has_many :proberties, :dependent => :destroy, foreign_key: "mfile_id"
   has_and_belongs_to_many :attris, foreign_key: "mfile_id", join_table: "attris_mfiles"
 
   include MediaTypes
 
+  def meFile(ftype)
+    MeFile.find_by(medium_id: id, ftype: ftype)
+  end
 
   def path(ftype)
     MeFile.find_by(medium_id: id, ftype: ftype).path
@@ -16,14 +19,14 @@ class Medium < ApplicationRecord
     FileHandler.generateTn(fqName(URL_STORAGE_FS), fqName(URL_STORAGE_FSTN))
   end
 
-  def fqName(typ)
-    basePath = storage.path(typ)
-    if typ == URL_STORAGE_FS || typ == URL_STORAGE_FS
-      p = path(1)
+  def fqName(stype)
+    if stype == URL_STORAGE_FS || stype == URL_STORAGE_WEB
+      ftype = 1
     else
-      p = path(2)
+      ftype = 2
     end
-    File.join(basePath, p, name) || "<not defined>"
+    mf =  meFile(ftype)
+    File.join(mf.storage.path(stype), path(ftype), mf.name) || "<not defined>"
   end
 
   def fqNameCleaned(typ)

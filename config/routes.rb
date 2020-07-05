@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   resources :media do
     get 'xxx', :on => :member
+#    get 'render', 'on' => :member
   end
+  get 'media/:id/render' => 'media#showFull'
   resources :groups do
     get 'media', :on => :member
     get 'number', :on => :collection
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
 ####
 
 
+  get 'downloader/downloadYoutubeVideoe'
   get 'downloader/downloadYoutubeVideo'
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

@@ -1,31 +1,31 @@
 version: '2'
 services:
-  db:
+  db2:
     env_file:
       - /mnt/p/db.env
     image: mysql:5.7.25
     volumes:
-      - ../dbdata:/var/lib/mysql
+      - ../dbdata2:/var/lib/mysql
     ports:
-      - "3306:3306"
-  api:
+      - "3307:3306"
+  api2:
     env_file:
       - /mnt/p/db.env
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/myapp
-      - /mnt/p/m7:/media/m7
+      - /mnt/p:/media
     ports:
       - "3000:3000"
     depends_on:
-      - db
-  webserver:
+      - db2
+  web2:
     build: 
       context: .
       dockerfile: mynginx.Dockerfile
     volumes:
-      - /mnt/p/m7:/usr/share/nginx/html/m7
+      - /mnt/p:/usr/share/nginx/html
     ports:
       - "80:80"
 

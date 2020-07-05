@@ -1,4 +1,4 @@
-class Migrations
+class Migration
 
   MFILE_UNDEFINED = 0
   MFILE_LOCATION = 1
@@ -79,18 +79,27 @@ class Migrations
     end
   end
 
-  def migrateBookmarks()
-    bookmarks = Bookmark.all
-    bookmarks.each do |bookmark|
-      Bookmark.find_or_create_by({
-                                   id: folder.mfile_id,
-                                   name: folder.title,
-                                   mtype: 8,
-                                   group_id: nil # erstmal keine Rückwärtsverknüfung
-                               })
+  def migrateMfilesForBookmarks()
 
-
+    Bookmark.includes(:mfile).find_each do |b|
+      mfile = b.mfile
+      if mfile
+        Medium.find_or_create_by({
+                                     id: mfile.id,
+                                     mtype: mfile.mtype,
+                                     modified: mfile.modified,
+                                     mod_date: mfile.mod_date
+                                 })
+      end
     end
+    # mfiles.each do |mfile|
+    #   Medium.find_or_create_by({
+    #                                id: mfile.id,
+    #                                mtype: mfile.mtype,
+    #                                modified: mfile.modified,
+    #                                mod_date: mfile.mod_date
+    #                            })
+    # end
   end
 
   def getPath(folder)
