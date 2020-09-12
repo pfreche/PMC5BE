@@ -32,23 +32,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="new classes">
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis/20190118172417_create_fits.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis/20190118172417_create_fits.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis/20190126144010_create_tworkers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis/20190126144010_create_tworkers.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis/20190201204609_add_bm_to_bookmarks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis/20190201204609_add_bm_to_bookmarks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis/20190201205105_add_formula_to_tworker.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis/20190201205105_add_formula_to_tworker.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190118172417_create_fits.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190118172417_create_fits.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190126144010_create_tworkers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190126144010_create_tworkers.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190201204609_add_bm_to_bookmarks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190201204609_add_bm_to_bookmarks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190201205105_add_formula_to_tworker.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190201205105_add_formula_to_tworker.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190620152900_add_prop_config_to_tworker.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190620152900_add_prop_config_to_tworker.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190620153932_create_proberties.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190620153932_create_proberties.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190621150130_add_title_to_mfile.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190621150130_add_title_to_mfile.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190706163332_add_mtype_to_storage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190706163332_add_mtype_to_storage.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate.dis2/20190713073843_add_fit_id_to_storage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate.dis2/20190713073843_add_fit_id_to_storage.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200703080603_create_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200703080603_create_groups.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200703080736_create_media.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200703080736_create_media.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200703114234_create_me_files.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200703114234_create_me_files.rb" afterDir="false" />
+    <list default="true" id="b8db239e-2e5f-4752-ab43-c60b4640ba12" name="Default Changelist" comment="rails migration to 6.0.3">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="master" />
         <entry key="P:/" value="dependabot/bundler/rack-cors-1.0.5" />
       </map>
     </option>
@@ -84,14 +71,14 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controllers" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dev/PMC5FEImp" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE" />
       <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE\app\controllers" />
       <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE\app\models" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\peter\PMC5\PMC5BE" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: PMC5BE">
@@ -207,7 +194,8 @@
       <workItem from="1593759424955" duration="2985000" />
       <workItem from="1593762469701" duration="81000" />
       <workItem from="1593762654011" duration="4158000" />
-      <workItem from="1593766870350" duration="28076000" />
+      <workItem from="1593766870350" duration="56965000" />
+      <workItem from="1594060720981" duration="4425000" />
     </task>
     <task id="LOCAL-00001" summary="add workspace and reformatting">
       <created>1584270140183</created>
@@ -258,7 +246,35 @@
       <option name="project" value="LOCAL" />
       <updated>1593855236997</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new classes">
+      <created>1593855334085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593855334085</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new classes">
+      <created>1593855701221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593855701221</updated>
+    </task>
+    <task id="LOCAL-00010" summary="further configuration">
+      <created>1593959045186</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593959045186</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rails migration to 6.0.3">
+      <created>1593967434300</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593967434300</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +303,9 @@
     <MESSAGE value="secure db and sketch new db design" />
     <MESSAGE value="start new db model" />
     <MESSAGE value="new classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes" />
+    <MESSAGE value="further configuration" />
+    <MESSAGE value="rails migration to 6.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="rails migration to 6.0.3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593599460727">
@@ -303,36 +321,48 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593339333941" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593337916521">
+    <state x="92" y="120" width="1736" height="856" key="DiffContextDialog" timestamp="1593959981586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="92" y="120" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593959981586" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594564453241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1594564453241" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593337916521" />
-    <state x="328" y="18" key="SettingsEditor" timestamp="1593762514863">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="461" y="26" key="SettingsEditor" timestamp="1593965678772">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593762514863" />
+    <state x="461" y="26" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593965678772" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593338085487" />
-    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2" timestamp="1593763779467">
+    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2" timestamp="1593968788288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593763779467" />
+    <state x="393" y="177" width="815" height="534" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593968788288" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593337594511" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593965215932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593965215932" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593773101084">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1593773101084" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593801000479">
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1593963727334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593801000479" />
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593963727334" />
+    <state x="548" y="0" width="823" height="1040" key="find.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593962606467" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1593777184663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593777184663" />
-    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup" timestamp="1593803981529">
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup" timestamp="1593963498702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593803981529" />
+    <state x="443" y="167" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593963498702" />
+    <state x="623" y="239" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593939374961" />
     <state x="623" y="239" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593337533889" />
   </component>
 </project>

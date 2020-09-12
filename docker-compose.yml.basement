@@ -3,7 +3,7 @@ services:
   db2:
     env_file:
       - /mnt/p/db.env
-    image: mysql:5.7.25
+    image: mysql:5.7.31
     volumes:
       - ../dbdata2:/var/lib/mysql
     ports:
